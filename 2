@@ -1,0 +1,22 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main() {
+    int n;
+    cout << "Введіть n: ";
+    cin >> n;
+    
+    double y = 1;
+    double sum = 0;
+    
+    for (int i = 1; i <= n; i++) {
+        sum += sin(i);
+        y *= sum;
+    }
+    
+    cout << "Y = " << y << endl;
+    
+    return 0;
+}
