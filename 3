@@ -1,0 +1,25 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int z = 18;
+    int k = 0;
+    
+    cout << "Варіанти купівлі для " << z << " кг:\n";
+    
+    for (int i = 0; i <= z / 5; i++) {
+        for (int j = 0; j <= z / 4; j++) {
+            for (int l = 0; l <= z / 2; l++) {
+                if (i * 5 + j * 4 + l * 2 == z) {
+                    cout << "По 5 кг: " << i << ", по 4 кг: " << j << ", по 2 кг: " << l << endl;
+                    k++;
+                }
+            }
+        }
+    }
+    
+    cout << "Всього варіантів: " << k << endl;
+    
+    return 0;
+}
